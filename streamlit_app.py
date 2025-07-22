@@ -4,7 +4,7 @@ import joblib
 # Load the wrapped EmailPredictor class
 @st.cache_resource
 def load_predictor():
-    return joblib.load("EmailPredictor.joblib")
+    return joblib.load("email_predictor.joblib")
 
 predictor = load_predictor()
 

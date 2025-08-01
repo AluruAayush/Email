@@ -1,9 +1,9 @@
 import streamlit as st
 import joblib
-import pandas as pd  # For pd.DataFrame
+import pandas as pd 
 import re  # For regex operations
-from textblob import TextBlob  # For sentiment analysis
-import textstat  # For readability scoring
+from textblob import TextBlob
+import textstat
 
 # Define the EmailPredictor class here (before loading the model)
 class EmailPredictor:
@@ -59,7 +59,6 @@ class EmailPredictor:
 
         return pd.DataFrame(f)
 
-    # ---- Feature helpers ----
     def contains_number(self, text): return int(bool(re.search(r'\d', str(text))))
     def uppercase_pct(self, text):
         letters = [c for c in str(text) if c.isalpha()]
